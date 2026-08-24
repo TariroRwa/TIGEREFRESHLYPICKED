@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tigere Freshly Picked</title>
+    <!-- Boxicons Link (Matches your main page icons) -->
+     <link href="https://googleapis.com" rel="style">
+    <link href='https://unpkg.com' rel='stylesheet'>
+    <style>
+        :root {
+            --sage-light: #A3B899;
+            --sage-medium: #87A987;
+            --sage-dark: #6B8E6B;
+            --forest-dark: #3B4D3B;
+            --charcoal: #2A342A;
+            --bg-warm: #F5F7F4;
+        }
+        /* Basic styling to keep the clean look of your store */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-warm);
+            color: var(--charcoal);
+            line-height: 1.75;
+        }
+        .nav-header {
+            max-height: 1100px;
+            margin: 25px auto 0 auto;
+            padding: 0 20px;
+        }
+         .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--sage-dark);
+            font-weight: 500;
+            gap: 6px;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-4px);
+            color: var(--forest-dark);
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(42, 52, 42, 0.55), rgba(42, 52, 42, 0.55)), url('about.jpg') center/cover no-repeat;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            margin: 20px auto 45px auto;
+            max-width: 1100px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(107, 142, 107, 0.1);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            margin: 0;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Main Content Layout Container */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .story-text {
+            font-size: 1.2rem;
+            color: var(--forest-dark);
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 50px auto;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        /* Grid layout for the cards */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(107, 142, 107, 0.04);
+            border-top: 4px solid var(--sage-medium);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(107, 142, 107, 0.08);
+        }
+
+        .card-icon {
+            font-size: 2.4rem;
+            color: var(--sage-medium);
+            margin-bottom: 20px;
+            display: inline-block;
+            background: #F4F7F4;
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: var(--forest-dark);
+            font-size: 1.45rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-banner { height: 220px; }
+            .hero-content h1 { font-size: 2.4rem; }
+            .grid-layout { grid-template-columns: 1fr; gap: 25px; }
+            .story-text { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+     <header class="nav-header">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-left-arrow-alt'></i> Back to Shop
+        </a>
+    </header>
+
+    <!-- Hero Banner with Sage Overlay -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Our Story</h1>
+            <p>Cultivating fresh experiences daily</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <!-- Main introduction statement -->
+        <p class="story-text">
+            Welcome to <strong>Tigere Freshly Picked</strong>. As a proudly female-owned and operated Zimbabwean Organic Produce Company. We are passionate about bringing fresh, healthy, and organic produce straight from our local fields directly to your kitchen table. We blend dedicated local stewardship with a commitment to feeding our community.
+        </p>
+        
+        <!-- Two-column grid blocks -->
+        <div class="grid-layout">
+            <div class="card">
+                <div class="card-icon"><i class='bx bx-target-lock'></i></div>
+                <h2>Our Mission</h2>
+                <p>We believe everyone deserves access to top-tier, nutrient-rich food. We ensure that our vegetables, fruits, and farm hampers remain affordable while maintaining the absolute highest standards of quality in the Zimbabwean market.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class='bx bx-basket'></i></div>
+                <h2>What We Offer</h2>
+                <p>From custom vegetable hampers tailored specifically to your family's needs, to bulk farm orders for local businesses, we hand-pick every item with care to guarantee ultimate freshness.</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
