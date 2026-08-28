@@ -187,9 +187,6 @@ padding-bottom: 4px;
     z-index: 10001;
     display: none;
 }
-.swiper-wrapper {
-    display: flex;
-}
 .swiper-slide.container {
     width: 100%;
     min-height: 100vh;
@@ -751,15 +748,12 @@ padding-bottom: 4px;
         object-fit: contain;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .swiper-slide.container {
         flex-direction: row;
         justify-content: space-between;
-        gap: 4rem;
-        padding-top: 90px;
         padding-left: 5%;
         padding-right: 8%;
-        padding-bottom: 60px;
     }
 }
 @media (max-width: 370px) {
