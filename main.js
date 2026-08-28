@@ -1,6 +1,7 @@
 //Swiper
 var swiper = new Swiper(".home", {
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
         delay: 2500,
@@ -11,6 +12,9 @@ var swiper = new Swiper(".home", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        1024: {
+            spaceBetween: 30
 });
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
