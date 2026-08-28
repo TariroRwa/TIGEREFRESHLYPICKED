@@ -1289,3 +1289,21 @@ a:visited {
     color: #555;
     line-height: 1.5;
 }
+/* FORCE SWIPER SLIDES TO BE FULL SCREEN ON MOBILE */
+@media (max-width: 991px) {
+    .swiper-slide {
+        width: 100vw !important;
+        max-width: 100% !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        flex-direction: column !important; /* Stacks text above the food images */
+        padding: 40px 20px !important;
+    }
+    
+    /* Forces the parent container to behave like a normal slider strip */
+    .swiper-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        width: max-content !important;
+    }
+}
