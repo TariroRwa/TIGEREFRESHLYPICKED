@@ -453,3 +453,39 @@ header {
 
 .categories-container .box .bx {
     padding: 10px;
+
+   /* ==========================================================================
+   POPULAR PRODUCTS RESPONSIVE GRID CORRECTION
+   ========================================================================== */
+.productss-container {
+    display: grid !important;
+    /* This creates multi-column rows automatically depending on screen space */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 25px !important;
+    padding: 30px 4% !important;
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productss-container .box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 360px !important; /* Standard card height frame */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* This targets YOUR product images so they look perfect without stretching */
+.productss-container .box img {
+    max-height: 160px !important; 
+    width: 100% !important;
+    object-fit: contain !important; /* Prevents squishing your custom shapes */
+    margin: 15px auto !important;
+    display: block !important;
+}
+
