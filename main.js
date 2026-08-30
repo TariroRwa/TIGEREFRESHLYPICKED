@@ -15,6 +15,8 @@ var swiper = new Swiper(".home", {
     breakpoints: {
         1024: {
             spaceBetween: 30
+        }
+    }
 });
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
