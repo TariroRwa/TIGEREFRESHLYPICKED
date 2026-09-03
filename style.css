@@ -512,7 +512,9 @@ header {
 }
 
 .about-text {
-  width: 600px;                 /* fixed width for text block */
+    flex: 1;
+  min-width: 300px; 
+                  /* fixed width for text block */
 }
 
 .about-text span {
