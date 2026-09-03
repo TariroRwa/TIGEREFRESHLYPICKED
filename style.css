@@ -543,7 +543,7 @@ header {
 /* Social icons */
 .social {
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   gap: 1rem;
   margin-top: 1rem;
 }
