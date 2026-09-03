@@ -495,10 +495,11 @@ header {
 
 /* Footer Section */
 .footer {
+    width: 100;
   max-width: 1200px;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* fixed 4 columns everywhere */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* fixed 4 columns everywhere */
   gap: 2rem;
   background: #fef4ea;
   border-radius: 0.5rem;
@@ -508,6 +509,7 @@ header {
 .footer-box {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .footer-box h2 {
