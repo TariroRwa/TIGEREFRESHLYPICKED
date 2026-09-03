@@ -493,6 +493,72 @@ header {
     }
 }
 
+/* Customers Section */
+.customers {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.customers h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--forest-dark);
+}
+
+.customers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 reviews side by side */
+  gap: 2rem;
+}
+
+.customers-container .box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(14, 55, 54, 0.15);
+  text-align: center;
+}
+
+.customers-container .box i.bxs-quote-alt-left {
+  font-size: 2rem;
+  color: var(--light-orange-color);
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: var(--light-orange-color);
+  margin-bottom: 1rem;
+}
+
+.customers-container .box p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--charcoal);
+}
+
+.review-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.review-profile h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--forest-dark);
+}
+
+
+
 /* Footer Section */
 .footer {
     width: 100;
