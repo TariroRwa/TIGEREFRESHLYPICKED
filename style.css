@@ -204,7 +204,7 @@ header {
 /*home css*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -215,6 +215,14 @@ header {
   background-attachment: fixed;
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 5%;
+  }
+}
+
 
 .hero::before {
   content: "";
