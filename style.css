@@ -216,12 +216,8 @@ header {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 60px 5%;
-  }
-}
+
+
 
 
 .hero::before {
