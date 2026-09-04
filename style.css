@@ -216,7 +216,8 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.7); /* watermark overlay */
+  background: rgba(0,0,0,0.4); /* watermark overlay */
+  border-radius: 8px;
   z-index: 1;
 }
 
@@ -227,7 +228,14 @@ header {
 
 .hero-content {
   max-width: 50%;
+  padding: 40px;
+  position: relative;
+  background: url("Fresh Green Vegetables Border on Solid Background.jfif") no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+  color: #fff; /* make text white for contrast */
 }
+
 
 .hero-content h1 {
   font-size: 2.5rem;
@@ -245,6 +253,13 @@ header {
   font-size: 1rem;
   color: #444;
   margin-bottom: 25px;
+}
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-content a {
+  position: relative;
+  z-index: 2; /* keep text above overlay */
 }
 
 .hero-image img {
