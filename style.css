@@ -203,12 +203,16 @@ header {
 
 /*home css*/
 .hero {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 80px 8%;
-  background: url("images/bg-hero.jpg") no-repeat center center;
+  background: url("Fresh\ Green\ Vegetables\ Border\ on\ Solid\ Background.jfif") no-repeat center center;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -217,7 +221,6 @@ header {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.4); /* watermark overlay */
-  border-radius: 8px;
   z-index: 1;
 }
 
@@ -230,10 +233,8 @@ header {
   max-width: 50%;
   padding: 40px;
   position: relative;
-  background: url("Fresh Green Vegetables Border on Solid Background.jfif") no-repeat center center;
-  background-size: cover;
-  border-radius: 8px;
   color: #fff; /* make text white for contrast */
+  z-index: 2;
 }
 
 
