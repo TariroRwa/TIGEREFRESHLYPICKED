@@ -210,7 +210,8 @@ header {
   justify-content: space-between;
   padding: 80px 8%;
   background: url("Fresh\ Green\ Vegetables\ Border\ on\ Solid\ Background.jfif") no-repeat center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   position: relative;
