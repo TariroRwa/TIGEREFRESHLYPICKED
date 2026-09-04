@@ -216,13 +216,11 @@ header {
   position: relative;
 }
 
+
 @media (max-width: 768px) {
   .hero {
-    background-size: contain;   /* show full image */
-    background-repeat: no-repeat;
-    background-position: top center; /* keep focus on top part */
-    height: auto;               /* shrink to fit content */
-    padding: 60px 5%;
+    background: url("How to Restore Your Gut Health - Cada Consult.jfif") no-repeat center center;
+    background-size: cover;
   }
 }
 
