@@ -204,7 +204,7 @@ header {
 /*home css*/
 .hero {
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
