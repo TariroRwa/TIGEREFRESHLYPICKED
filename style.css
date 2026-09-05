@@ -85,6 +85,10 @@ header {
     column-gap: 0.5rem;
 }
 
+.logo img {
+  height: 90px;
+}
+
 .logo .bx {
     font-size: 54px;
     color: var(--orange-color);
@@ -103,7 +107,7 @@ header {
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.3px;
-    color: #64748b;
+    color: #1B5E20;
     transition: color 0.3s ease-in-out;
     padding: 0.5rem 0rem;
     position: relative;
@@ -112,6 +116,7 @@ header {
 .navbar a:hover {
     background: none;
     color: var(--sage-dark);
+    color: #e67e22;
 }
 
 .navbar a.home-active {
@@ -402,17 +407,69 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 60px 8%;
-  background: #f9f9f9;
+  background: linear-gradient(
+    135deg,
+    #f9f9f9 0%,
+    #eaf7ea 100%
+  );
 }
 
 .feature-item {
   background: #fff;
   padding: 25px;
   border-radius: 8px;
+  opacity: 0;
   text-align: center;
+  transform: translateY(30);
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
+
+.feature-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.feature-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-item i {
+  font-size: 2rem;
+  color: #1B5E20; /* deep forest green */
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover i {
+  color: #E67E22; /* warm accent on hover */
+}
+
+.feature-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1B5E20;
+  margin-bottom: 12px;
+}
+
+.feature-item p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr; /* stack vertically on mobile */
+    gap: 30px;
+  }
+}
+
+
 
 
 .heading {

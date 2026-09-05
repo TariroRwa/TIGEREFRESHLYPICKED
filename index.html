@@ -22,7 +22,7 @@
     <!--navbar-->
     <header>
         <a href="#" class="logo"> 
-            <img src="logo-removebg-preview.png" style="height: 130px;" alt="Logo">
+            <img src="logo-removebg-preview.png" alt="Logo">
         </a>
         <!--menu icon-->
 
@@ -68,16 +68,20 @@
 
 </section>
 
+
 <section class="features">
   <div class="feature-item">
+     <i class='bx bx-leaf'></i>
     <h3>Locally Grown</h3>
     <p>Sourced fresh from our fields directly to your table.</p>
   </div>
   <div class="feature-item">
+    <i class='bx bx-food-menu'></i>
     <h3>100% Organic Food</h3>
     <p>Pure, natural nourishment without harmful chemicals.</p>
   </div>
   <div class="feature-item">
+    <i class='bx bx-truck'></i>
     <h3>Fast Delivery</h3>
     <p>Harvested and brought right to your door in record time.</p>
   </div>
@@ -327,7 +331,22 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Your custom JS -->
-<script src="main.js"></script>
+<script>
+  const featureItems = document.querySelectorAll('.feature-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  featureItems.forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
 </body>
 
 </html>
