@@ -515,7 +515,12 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
     box-shadow: 0 4px 15px rgba(107, 142, 107, 0.04);
     border: 1px solid rgba(135, 169, 135, 0.15);
     background: #e9f1ee;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease,  box-shadow 0.3s ease;
+}
+
+.categories-container .box:hover .bx {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
 }
 
 .categories-container .box img {
@@ -525,13 +530,16 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
 }
 
 .categories-container .box h2 {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+    margin-top: 6.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .categories-container .box span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: #475569;
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -545,11 +553,36 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
     margin-top: 2rem;
 }
 
+.categories .heading h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e2b23;
+}
+
+.categories .heading span {
+  color: #E67E22; /* warm accent */
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Category Box Palettes */
-.box1 { background: #fef4ea; }
-.box2 { background: #e9f4e3; }
-.box3 { background: #faeaea; }
-.box4 { background: #eeeef9; }
+.box1 { background-image: url("super.jfif"); }
+.box2 { background-image: url("veg.jfif"); }
+.box3 { background-image: url("fruits.jfif"); }
+.box4 { background-image: url("Pigs.jfif"); }
 
 
 /*products css*/
