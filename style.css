@@ -2,6 +2,7 @@
    1. CORE FONTS & RESET SETTINGS
    ========================================================================== */
 @import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 * {
     font-family: 'Outfit', sans-serif;
@@ -204,12 +205,12 @@ header {
 /*home css*/
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 8% 80px;
-  background: url("Green Food Colour Palette Inspiration Fruits Vegetables Fruit Veggies Nature's Bounty.jfif") no-repeat center center;
+  padding: 120px 8% 80px;
+  background: url("Green\ Food\ Colour\ Palette\ Inspiration\ Fruits\ Vegetables\ Fruit\ Veggies\ Nature\'s\ Bounty.jfif") no-repeat center center;
   background-size: contain;
   background-position: center;
   background-attachment: fixed;
@@ -230,7 +231,10 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4); /* watermark overlay */
+  background: linear-gradient(
+     rgba(0,0,0,0.35),
+     rgba(0,0,0,0.15)
+  ); /* watermark overlay */
   z-index: 1;
 }
 
@@ -240,25 +244,43 @@ header {
 }
 
 .hero-content {
-  max-width: 50%;
-  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
   position: relative;
   color: #fff; /* make text white for contrast */
   z-index: 2;
+  opacity: 0;                     /* start invisible */
+  transform: translateY(20px);     /* start slightly lower */
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Keyframes for fade-in + upward motion */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content h1 {
-  font-family: 'Montserrat', sans-serif; /* modern, professional font */
+  font-family: 'Poppins', sans-serif; /* modern, professional font */
   font-size: 3rem;                        /* large and bold */
-  font-weight: 700;                       /* strong emphasis */
+  font-weight: 700;      
+  margin-bottom: 15px;                 /* strong emphasis */
   text-transform: uppercase;              /* all caps for authority */
   letter-spacing: 2px;                    /* spacing for elegance */
-  color: #2E7D32;                         /* deep green for freshness */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.3); /* soft shadow for depth */
+  color: #1B5E20;                         /* deep green for freshness */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* soft shadow for depth */
 }
 
 .hero-content h1 span {
-  color: #F4A261;   /* accent color (orange) */
+  color: #e67e22;   /* accent color (orange) */
   font-weight: 800; /* extra bold */
 }
 
@@ -266,35 +288,97 @@ header {
   font-family: 'Lora', serif;   /* elegant serif font */
   font-size: 1.8rem;
   font-style: italic;
-  color: #2c3e50;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #F4A261; /* warm orange accent */
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 
 .hero-content p {
 font-family: 'Open Sans', sans-serif;     /* clean body font */
   font-size: 1rem;
-  color: #444;                              /* neutral grey */
+  font-weight: 400;
+  color: #f9f9f9;  
+  margin-top: 10px;                            /* neutral grey */
   margin-bottom: 25px;
-  line-height: 1.6;                         /* better readability */
+  line-height: 1.6;    
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);                     /* better readability */
+  max-width: 600px;                 /* keeps text compact */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;   /* smaller headline */
+    letter-spacing: 1px; /* tighter spacing */
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;   /* softer subheading */
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;  /* slightly smaller body text */
+  }
+
+  .hero-content {
+    padding: 0 10px;     /* more breathing room on small screens */
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;     /* centers both buttons */
+  gap: 20px;                   /* space between them */
+  margin-top: 25px;
 }
 
 .hero-content a.btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background-color: #2E7D32;                /* brand green */
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle depth */ 
   transition: background-color 0.3s ease;
 }
 
 .hero-content a.btn:hover {
   background-color: #1B5E20;
+   transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.hero-content a.btn-secondary {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: transparent;
+  color: #1B5E20;              /* deep forest green */
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #1B5E20;   /* outlined style */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-content a.btn-secondary:hover {
+  background-color: #1B5E20;   /* fills on hover */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
 
