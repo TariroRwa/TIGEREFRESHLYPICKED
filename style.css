@@ -553,6 +553,22 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
     margin-top: 2rem;
 }
 
+.categories-container .box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay */
+  border-radius: 12px;
+}
+
+.categories-container .box h2,
+.categories-container .box span,
+.categories-container .box .bx {
+  position: relative; /* ensures text sits above overlay */
+  z-index: 1;
+}
+
+
 .categories .heading h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
