@@ -208,12 +208,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 8%;
+  padding: 100px 8% 80px;
   background: url("Fresh\ Green\ Vegetables\ Border\ on\ Solid\ Background.jfif") no-repeat center center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  .hero {
+  margin-top: 80px; /* equal to header height */
+}
+
 }
 
 
