@@ -226,12 +226,6 @@ header {
   }
 }
 
-
-
-
-
-
-
 .hero::before {
   content: "";
   position: absolute;
@@ -253,24 +247,57 @@ header {
   z-index: 2;
 }
 
-
 .hero-content h1 {
-  font-size: 2.5rem;
-  color: #13553a;
-  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif; /* modern, professional font */
+  font-size: 3rem;                        /* large and bold */
+  font-weight: 700;                       /* strong emphasis */
+  text-transform: uppercase;              /* all caps for authority */
+  letter-spacing: 2px;                    /* spacing for elegance */
+  color: #2E7D32;                         /* deep green for freshness */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3); /* soft shadow for depth */
+}
+
+.hero-content h1 span {
+  color: #F4A261;   /* accent color (orange) */
+  font-weight: 800; /* extra bold */
 }
 
 .hero-content h2 {
+  font-family: 'Lora', serif;   /* elegant serif font */
   font-size: 1.8rem;
+  font-style: italic;
   color: #2c3e50;
   margin-bottom: 20px;
 }
 
+
 .hero-content p {
+font-family: 'Open Sans', sans-serif;     /* clean body font */
   font-size: 1rem;
-  color: #444;
+  color: #444;                              /* neutral grey */
   margin-bottom: 25px;
+  line-height: 1.6;                         /* better readability */
 }
+
+.hero-content a.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2E7D32;                /* brand green */
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content a.btn:hover {
+  background-color: #1B5E20;
+}
+
+
 .hero-content h1,
 .hero-content h2,
 .hero-content p,
