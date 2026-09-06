@@ -908,7 +908,8 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
   flex-direction: column;
   align-items: center;
   justify-content: center;       /* centers everything inside */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 
   .category-header {
   animation: fadeInUp 0.8s ease forwards;
@@ -931,15 +932,16 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
 /* Super Foods Title */
 .category-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 900;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: #2c3e50;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
   text-align: center;          /* centers the title text */
   position: relative;
   display: inline-block;
   margin-top: 20px;
+  padding-bottom: 4px;
 }
 
 .category-subtitle {
@@ -1074,7 +1076,7 @@ font-family: 'Open Sans', sans-serif;     /* clean body font */
   background: linear-gradient(135deg, #4c6355, #32493c); /* modern green gradient */
   color: #fff;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
@@ -1109,3 +1111,150 @@ body::before {
   z-index: -1;
 }
 
+/* Livestock Page Layout */
+.livestock-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.back-btnn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #a88e68, #6e5625); /* modern green gradient */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* Product Card */
+.livestock-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #FDF6EC;   /* warm cream */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.livestock-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.livestock-gallery {
+  flex: 0 0 320px;             /* fixed width for image column */
+  display: flex;
+  justify-content: center;
+}
+
+.livestock-gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text column */
+.livestock-info {
+  flex: 1;                     /* take remaining space */
+}
+
+.livestock-info p {
+  line-height: 1.6;        /* increases vertical spacing between lines */
+  margin-bottom: 14px;     /* adds space after each paragraph */
+  color: #3A2F2F;          /* warm dark brown for readability */
+  font-size: 1rem;
+}
+
+.livestock-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #A65C47;
+  margin-bottom: 6px;
+}
+
+
+/* Titles */
+.livestock-title {
+   font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #5C4033;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;          /* centers the title text */
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding-bottom: 4px;
+}
+
+.livestock-main-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2C3E50;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+}
+
+.livestock-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #805807;
+  margin: 8px auto 0;           /* centers underline */
+  border-radius: 2px;
+}
+
+/* Buttons */
+.livestock-btn {
+  background-color: #C97B63;   /* terracotta */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.livestock-btn:hover {
+  background-color: #A65C47;   /* darker terracotta */
+}
+
+.livestock-tag {
+  display: inline-block;
+  background-color: #EAD2C0;   /* soft warm beige */
+  color: #5C4033;              /* deep brown */
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .livestock-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .livestock-gallery {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
+}
