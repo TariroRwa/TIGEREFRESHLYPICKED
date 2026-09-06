@@ -97,26 +97,26 @@
         <!--Container Content-->
         <div class="categories-container">
             <!--box 1-->
-            <a href="super-foods.html" class="box box1">
+            <a href="super-foods.html" class="box box11">
                 <h2>SUPER FOODS</h2>
                 <span>4 Items</span>
                 <i class='bx bx-right-arrow-alt'></i>
             </a>
              <!--box 2-->
-            <a href="vegetables.html" class="box box2">
+            <a href="vegetables.html" class="box box22">
                 <h2>VEGETABLES</h2>
                 <span>48 Items</span>
                 <i class='bx bx-right-arrow-alt'></i>
             </a>
              <!--box 3-->
-            <a href="fruits.html" class="box box3">
+            <a href="fruits.html" class="box box33">
                 <h2>FRUITS</h2>
                 <span>5 Items</span>
                 <i class='bx bx-right-arrow-alt'></i>
             </a>
 
             <!--box 4-->
-            <a href="animals.html" class="box box4">
+            <a href="animals.html" class="box box44">
                 <h2>LIVESTOCK</h2>
                 <span>1 Item</span>
                 <i class='bx bx-right-arrow-alt'></i>
@@ -290,7 +290,30 @@
     <!--footer-->
     <section class="footer" id="footer">
         <div class="footer-box">
-            <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
+            <div id="qrcode"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://tarirorwa.github.io/TIGEREFRESHLYPICKED/index.html",
+    width: 200,
+    height: 200,
+    colorDark : "#1b4332",   // dark green
+    colorLight : "#f2f5f3",  // pastel background
+    correctLevel : QRCode.CorrectLevel.H
+  });
+</script>
+
+<style>
+  #qrcode {
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow */
+    display: inline-block;
+  }
+</style>
+
             <p>TIGERE FRESHLY PICKED <br> 483 Scanlen Drive, Quinnington <br> Borrowdale, Harare,ZW</p>
             <div class="social">
                 <a href="https://www.facebook.com/profile.php?id=61572275234765" target="_blank" rel="noopener noreferrer"><i class= 'bx bxl-facebook'></i></a>
